@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <h1>Hello</h1>
+  <div id="objects"></div>
+</head>
+<body>
+
+</body>
+</html>
+<style type="text/css">
+  
+</style>
+<script type="text/javascript">
+  var products = [
+  {id: 1, name: "applesauce", price: "1000"},
+  {id: 2, name: "milk", price: "5"},
+  {id: 3, name: "cheese", price: "10"}
+];
+
+console.log(products);
+
+var productsHTML = "";
+
+products.forEach(function(product) {
+  productsHTML += "<h3> Name: " + product.name + "</h3>" + "<p>" + product.price + "</p>";
+});
+
+var objectDiv = document.querySelector("#objects");
+objectDiv.innerHTML = productsHTML;
+
+console.log(productsHTML);
+
+</script>
